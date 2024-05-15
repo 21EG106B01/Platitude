@@ -7,13 +7,17 @@
 #include "Building.h"
 using namespace sf;
 
-std::vector<Building> allBuildings = Building::createBuildingStore();
 
 int main()
 {
     //Game Window
-    sf::Window window(sf::VideoMode(500, 500), "Platitude", sf::Style::Titlebar | sf::Style::Close);
+    sf::RenderWindow window(sf::VideoMode(500, 500), "Platitude", sf::Style::Titlebar | sf::Style::Close);
     sf::Event ev;
+
+
+    std::vector<Building> allBuildings = Building::createBuildingStore();
+    sf::CircleShape shape(100.f);
+    shape.setFillColor(sf::Color::Green);
 
     //Game Loop
     while (window.isOpen()) {
@@ -25,6 +29,9 @@ int main()
             if (ev.type == sf::Event::Closed)
                 window.close();
         }
+        window.clear();
+        window.draw(shape);
+        window.display();
     }
 
 

@@ -12,13 +12,17 @@ void Building::show_stats() {
 	 std::cout << std::endl;
 }
 
-void Building::set_icon() {
-	std::cout << "Icon set";
+void Building::set_icon(std::string path) {
+    sf::Texture buildingTexture;
+    sf::Sprite bbuildingIcon;
+    buildingTexture.loadFromFile(path);
+    bbuildingIcon.setTexture(buildingTexture);
+    buildingIcon = bbuildingIcon;
 }
 
-std::vector<Building> Building::createBuildingStore() {
+std::vector<Building*> Building::createBuildingStore() {
 
-    std::vector<Building> allBuildings;
+    std::vector<Building*> allBuildings;
 
     std::map<std::string, int> woodProductionTypes = { {"Rod", 2}, {"Plank", 5}, {"Wheel", 8} };
     std::map<std::string, int> stoneProductionTypes = { {"Gravel", 3}, {"Block", 5}, {"Tool Head", 10}, {"Weapon Head", 10} };
@@ -29,19 +33,32 @@ std::vector<Building> Building::createBuildingStore() {
     std::map<std::string, int> leatherProductionTypes = { {"Sheep Skin", 5}, {"Goat Skin", 5}, {"Cow Leather", 10}, {"Bear Fur", 40} };
 
     Building woodcutterLodge(2, 2, "Woodcutter's Lodge", "Wood", woodProductionTypes);
-    allBuildings.push_back(woodcutterLodge);
+    woodcutterLodge.set_icon("resources/images/woodcutterlodge.jpg");
+    allBuildings.push_back(&woodcutterLodge);
+
     Building stoneQuarry(3, 3, "Stone Quarry", "Mine", stoneProductionTypes);
-    allBuildings.push_back(stoneQuarry);
+    stoneQuarry.set_icon("resources/images/stonequarry.jpg");
+    allBuildings.push_back(&stoneQuarry);
+
     Building ironMine(2, 2, "Iron Mine", "Mine", ironProductionTypes);
-    allBuildings.push_back(ironMine);
+    ironMine.set_icon("resources/images/ironmine.jpg");
+    allBuildings.push_back(&ironMine);
+
     Building goldMine(2, 2, "Gold Mine", "Mine", goldProductionTypes);
-    allBuildings.push_back(goldMine);
+    goldMine.set_icon("resources/images/goldmine.jpg");
+    allBuildings.push_back(&goldMine);
+
     Building farm(1, 1, "Farm", "Food", foodProductionTypes);
-    allBuildings.push_back(farm);
+    farm.set_icon("resources/images/farm.jpg");
+    allBuildings.push_back(&farm);
+
     Building fishingLodge(2, 2, "Fishing Lodge", "Food", fishProductionTypes);
-    allBuildings.push_back(fishingLodge);
+    fishingLodge.set_icon("resources/images/fishinglodge.jpg");
+    allBuildings.push_back(&fishingLodge);
+
     Building leatherHut(1, 1, "Leather Hut", "Cloth", leatherProductionTypes);
-    allBuildings.push_back(leatherHut);
+    leatherHut.set_icon("resources/images/leatherhut.jpg");
+    allBuildings.push_back(&leatherHut);
 
     return allBuildings;
 }

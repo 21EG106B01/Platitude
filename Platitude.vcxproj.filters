@@ -13,6 +13,12 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Resource Files\Images">
+      <UniqueIdentifier>{da5d999f-0354-4d42-8790-635fc3b2b752}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Fonts">
+      <UniqueIdentifier>{b2495aaf-281f-45fb-861d-a4ea343ee779}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Platitude.cpp">
@@ -21,10 +27,47 @@
     <ClCompile Include="Building.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Button.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Building.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Button.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="resources\images\grass_background.jpg">
+      <Filter>Resource Files\Images</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <Font Include="resources\fonts\Kanit-Light.ttf">
+      <Filter>Resource Files\Fonts</Filter>
+    </Font>
+    <Font Include="resources\fonts\Kanit-LightItalic.ttf">
+      <Filter>Resource Files\Fonts</Filter>
+    </Font>
+    <Font Include="resources\fonts\Kanit-Regular.ttf">
+      <Filter>Resource Files\Fonts</Filter>
+    </Font>
+    <Font Include="resources\fonts\Kanit-SemiBold.ttf">
+      <Filter>Resource Files\Fonts</Filter>
+    </Font>
+    <Font Include="resources\fonts\Lora-Bold.ttf">
+      <Filter>Resource Files\Fonts</Filter>
+    </Font>
+    <Font Include="resources\fonts\Lora-BoldItalic.ttf">
+      <Filter>Resource Files\Fonts</Filter>
+    </Font>
+    <Font Include="resources\fonts\Lora-Italic.ttf">
+      <Filter>Resource Files\Fonts</Filter>
+    </Font>
+    <Font Include="resources\fonts\Lora-Regular.ttf">
+      <Filter>Resource Files\Fonts</Filter>
+    </Font>
   </ItemGroup>
 </Project>

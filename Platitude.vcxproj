@@ -82,7 +82,7 @@
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalLibraryDirectories>C:\Users\abdus\Documents\Libraries\SFML-2.6.1\lib;C:\Users\abdus\source\repos\Platitude\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>freetype.lib;openal32.lib;sfml-audio.lib;sfml-graphics.lib;sfml-network.lib;sfml-main.lib;sfml-system.lib;sfml-window.lib;sfml-audio-d.lib;sfml-graphics-d.lib;sfml-network-d.lib;sfml-main-d.lib;sfml-system-d.lib;sfml-window-d.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>freetype.lib;openal32.lib;sfml-audio-d.lib;sfml-graphics-d.lib;sfml-network-d.lib;sfml-main-d.lib;sfml-system-d.lib;sfml-window-d.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -116,7 +116,7 @@
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalLibraryDirectories>C:\Users\abdus\Documents\Libraries\SFML-2.6.1\lib;C:\Users\abdus\source\repos\Platitude\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>freetype.lib;openal32.lib;sfml-audio.lib;sfml-graphics.lib;sfml-network.lib;sfml-main.lib;sfml-system.lib;sfml-window.lib;sfml-audio-d.lib;sfml-graphics-d.lib;sfml-network-d.lib;sfml-main-d.lib;sfml-system-d.lib;sfml-window-d.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>freetype.lib;openal32.lib;sfml-audio-d.lib;sfml-graphics-d.lib;sfml-network-d.lib;sfml-main-d.lib;sfml-system-d.lib;sfml-window-d.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -140,10 +140,25 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Building.cpp" />
+    <ClCompile Include="Button.cpp" />
     <ClCompile Include="Platitude.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Building.h" />
+    <ClInclude Include="Button.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="resources\images\grass_background.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Font Include="resources\fonts\Kanit-Light.ttf" />
+    <Font Include="resources\fonts\Kanit-LightItalic.ttf" />
+    <Font Include="resources\fonts\Kanit-Regular.ttf" />
+    <Font Include="resources\fonts\Kanit-SemiBold.ttf" />
+    <Font Include="resources\fonts\Lora-Bold.ttf" />
+    <Font Include="resources\fonts\Lora-BoldItalic.ttf" />
+    <Font Include="resources\fonts\Lora-Italic.ttf" />
+    <Font Include="resources\fonts\Lora-Regular.ttf" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
